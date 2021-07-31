@@ -5,6 +5,9 @@
   --no-accent-text-color: #ffffff;
   --second-bcg-text-color: #2f303a;
   --second-bcg-color: #f5f4fa;
+  --border-header-color:#ECECEC;
+  --button-change-color:#188ce8;
+  --portfolio-item-gap: 30px;
 }
 
 /*  #212121 - цвет основного текста*/
@@ -12,32 +15,81 @@
 /*  #2196F3 - цвет синий текста*/
 /*  #FFFFFF - цвет белый текста*/
 /*  #2F303A - цвет фона вторичный*/
+/*  #ECECEC - цвет рамки*/
+/*  #188ce8 - цвет кнопки*/
 
-/**/
 body {
   background-color: var(--no-accent-text-color);
-  font-family: Roboto; sans-serif;
+  font-family: Roboto, sans-serif;
   color:var(--primary-text-color);
   letter-spacing: 0.03em;
-}
-.first-section {
-  background-color: var(--second-bcg-text-color);
-  color: var(--no-accent-text-color);
+  font-size: 14px;
+  line-height:1.19;  
 }
 /*Общие*/
-ul {
+
+h1,h2,h3,h4,p,ul{
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.container{
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right:auto;
 }
 a {
   text-decoration: none;
 }
-/*WebStudio*/
+/*Header*/
+.header{
+  border-bottom: 1px solid var(--border-header-color);
+}
+header div.container{
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+}
+.section{
+  display: block;
+  padding: 94px 0 0;
+}
+/*nav*/
+
+nav.main-nav,ul.contact{
+  display: flex;
+  align-items: center;
+}
+li.contact-first.contact-second:not(:last-child){
+  margin-right: 50px;
+}
+/*webstudio*/
+.webstudio{
+  width: 145px;
+}
 span.web {
   font-family: Raleway;
   font-weight: bold;
   font-size: 26px;
   line-height: 1.19;
-  /*letter-spacing: 0.03em;*/
   color: var(--accent-text-color);
   text-decoration: none;
 }
@@ -46,10 +98,76 @@ span.studio {
   font-weight: bold;
   font-size: 26px;
   line-height: 1.19;
-  /*letter-spacing: 0.03em;*/
   color: var(--primary-text-color);
   text-decoration: none;
 }
+/*main-nav*/
+ul.contact{
+  width: 294px;
+  justify-content: space-between;
+  margin-left: 93px;
+}
+.contact-first{
+  display: block;
+  padding: 32px 0;
+  width: 68px;
+}
+.contact-first current{
+  width: 49px; 
+}
+.contact-first portfolio{
+  width: 77px;
+}
+
+/*nav-contacts*/
+ul.contact-second{
+  display:flex;
+  margin-left: auto;}
+
+  a.contact-second.mail{
+    width: 135px;
+  }
+  a.contact-second.tel{
+    width: 122px;
+  }
+/*Hero section*/
+.hero {
+  background-color: var(--second-bcg-text-color);
+  color: var(--no-accent-text-color);
+  padding: 200px 0;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+h1.hero-title{ 
+  max-width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--no-accent-text-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: 0.06em;
+}
+/*Кнопка "Заказать услугу"*/
+.hero-button {
+  background: var(--accent-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border:none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--no-accent-text-color);
+  padding: 10px 32px;
+}
+.hero-button:hover,
+.hero-button:focus{
+ background-color: var(--button-change-color);
+}
+
 /*Хедер Студия-Портфолио-Контакты*/
 
 a.contact-first {
@@ -59,7 +177,16 @@ a.contact-first {
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
 }
-
+/*Хедер почта-телефон*/
+a.contact-second {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: var(--second-text-color);
+  text-decoration: none;
+}
+/*Active navigation*/
 a.contact-first:hover,
 a.contact-first:focus {
   color: var(--accent-text-color);
@@ -71,76 +198,98 @@ a.contact-second:hover,
 a.contact-second:focus {
   color: var(--accent-text-color);
 }
+.contact-second.tel{
+  margin-left: 50px;
+}
 
-/*Хедер почта-телефон*/
-a.contact-second {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  /*letter-spacing: 0.03em;*/
-  color: var(--second-text-color);
-  text-decoration: none;
-}
-/*Эффективные решения для вашего бизнеса*/
-h1 {
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--no-accent-text-color);
-}
-/*Кнопка "Заказать услугу"*/
-button.order {
-  background: var(--accent-text-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  cursor: pointer;
-  font-family:inherit;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.88;
-  color: var(--no-accent-text-color);
-}
 /*Наши преимущества*/
-h3.advantages {
-  font-weight: bold;
+.nobottom.section {
+  padding-bottom: 0px;
+}
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  color: var(--primary-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+.feature-list,
+.images-list,
+.cards-list {
+  display: flex;
+}
+.feature-list-item:not(:last-child),
+.images-list-item:not(:last-child),
+.cards-list-item:not(:last-child)
+ {
+  margin-right: 30px;
+}
+.feature-list-item,
+.cards-list-item {
+  width: 270px;
+}
+.feature-list-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--primary-text-color);
   font-size: 14px;
+  font-weight: 700;
   line-height: 1.14;
-  /*letter-spacing: 0.03em;*/
   text-transform: uppercase;
 }
-p.advantages {
-  font-size: 14px;
-  line-height: 1.71;
-  /*letter-spacing: 0.03em;*/
+.feature-list .text {
+  margin-top: 0;
   color: var(--second-text-color);
+  line-height: 1.71;
 }
 /*Чем мы занимаемся*/
+
 h2.activity {
   font-weight: bold;
   font-size: 36px;
   line-height: 1.17;
-  /*text-align: center;*/
-  /*letter-spacing: 0.03em;*/
+  text-align: center;
+  letter-spacing: 0.03em;
+  padding:94px 0 50px;
+}
+.activity{
+  min-width: 376px;
+  margin: auto;
+  display: flex;
+  justify-content:center ;
+}
+ul.activity{
+  justify-content: space-between;
+  padding-top:50px;
+}
+.images-list-item {
+  width: 370px;
 }
 /*Наша команда*/
+
 section.personal {
-  background: var(--second-bcg-color);
+  background: var(--second-bcg-color); 
+}
+.team{
+  margin-left: auto;
+  margin-right: auto;
 }
 h2.personal {
   font-weight: bold;
   font-size: 36px;
   line-height: 1.17px;
   /*letter-spacing: 0.03em;*/
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 50px;
 }
 h3.personal {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  /*text-align: center;*/
-  /*letter-spacing: 0.03em;*/
 }
 p.personal {
   font-size: 16px;
@@ -148,50 +297,46 @@ p.personal {
   /*letter-spacing: 0.03em;*/
   color: var(--second-bcg-text-color);
 }
-div.personal-first {
-  background-color: var(--no-accent-text-color);
-  width: 270px;
+.cards-list-item {
+  background-color: var(--background-color-main);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
-
-div.personal-second {
-  background-color: var(--no-accent-text-color);
-  width: 270px;
+div.personal
+{
+  padding: 30px 55px 30px 55px;
+  text-align: center; 
 }
-div.personal-third {
-  background-color: var(--no-accent-text-color);
-  width: 270px;
-}
-div.personal-fourth {
-  background-color: var(--no-accent-text-color);
-  width: 270px;
-}
-
 /*Футер*/
 footer {
   background: var(--second-bcg-text-color);
+  padding: 60px 0 60px 0px;
 }
 .web-footer {
   font-family: Raleway;
   font-weight: bold;
   font-size: 26px;
   line-height: 1.19;
-  /*letter-spacing: 0.03em;*/
   color: var(--accent-text-color);
+  display: inline-block;
+  margin-bottom: 20px;
 }
 .studio-footer {
   font-family: Raleway;
   font-weight: bold;
   font-size: 26px;
   line-height: 1.19;
-  /*letter-spacing: 0.03em;*/
   color: var(--no-accent-text-color);
+  display: inline-block;
+  margin-bottom: 20px;
 }
 p.address {
   font-style:normal;
   font-size: 14px;
   line-height: 1.71;
-  /*letter-spacing: 0.03em;*/
   color: var(--no-accent-text-color);
+  margin: 0 0 9px 0;
 }
 a.contact-third:hover,
 a.contact-third:focus {
@@ -204,21 +349,32 @@ a.contact-third {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--second-text-color);
+  display: inline-block;
+  margin-bottom: 9px;
+  color:rgba(255, 255, 255, 0.6);
+}
+
+.footer-mail {
+  margin-top: 9px;
 }
 
 /*PORTFOLIO*/
 button.portfolio {
   font-family:inherit;
   background: var(--second-bcg-color);
-  /*color: var(--no-accent-text-color);*/
   cursor: pointer;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  padding: 6px 22px;
 }
 
-.portfolio:hover,
-.portfolio:focus {
+button.portfolio:hover,
+button.portfolio:focus {
   background: var(--accent-text-color);
   color: var(--no-accent-text-color);
   cursor: pointer;
@@ -230,10 +386,39 @@ h2.portfolio-filter {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--primary-text-color);
+  margin-bottom: 4px;
 }
 p.portfolio-filter {
   font-size: 16px;
   line-height: 1.88;
-  /*letter-spacing: 0.03em;*/
   color: var(--second-text-color);
 }
+.button-list {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+.button-list-item:not(:last-child) {
+  margin-right: 8px;
+}
+ul.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(-1*var(--portfolio-item-gap));
+  margin-bottom: calc(-1*var(--portfolio-item-gap));
+}
+.portfolio-item {
+  flex-basis: calc((100% - 3*var(--portfolio-item-gap)) /3 -10px);
+  margin: 0 var(--portfolio-item-gap) var(--portfolio-item-gap) 0;
+}
+.portfolio-description {
+  padding: 20px 24px 20px 24px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+a.portfolio-filter{
+  text-decoration: none;
+  margin-right:0;
+}
+

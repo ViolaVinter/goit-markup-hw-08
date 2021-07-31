@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="style.css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,164 +15,182 @@
     />
   </head>
   <body>
-    <header>
-      <a href=" " lang="en" class="webstudio">
-        <span class="web">Web</span><span class="studio">Studio</span></a
-      >
-      <nav>
+    <header class="header">
+      <div class="container">
+            <nav class="main-nav">
         <!--Хедер-Студия-Портфолио-Контакты-->
-        <ul class="contact-first">
-          <li>
+        <a href=" " lang="en" class="webstudio">
+          <span class="web">Web</span><span class="studio">Studio</span></a
+        >
+        <ul class="contact">
+          <li class="contact-first">
             <a href="./index.html" class="contact-first">Студия</a>
           </li>
-          <li>
+          <li class="contact-first">
             <a href="./portfolio.html" class="contact-first current"
               >Портфолио</a
             >
           </li>
-          <li>
+          <li class="contact-first">
             <a href="" class="contact-first">Контакты</a>
           </li>
         </ul>
       </nav>
       <!--Хедер почта-телефон-->
       <ul class="contact-second">
-        <li>
-          <a href="mailto:info@devstudio.com" class="contact-second"
+        <li class="contact-second">
+          <a href="mailto:info@devstudio.com" class="contact-second mail"
             >info@devstudio.com</a
           >
         </li>
-        <li>
-          <a href="tel:+380961111111" class="contact-second"
+        <li class="contact-second">
+          <a href="tel:+380961111111" class="contact-second tel"
             >+38 096 111 11 11</a
           >
         </li>
       </ul>
+    </div>
     </header>
     <main>
-      <section>
-        <!--<h2>Портфолио работ</h2>-->
-        <ul>
-          <li>
+      <section class="section">
+        <div class="container">
+        <h2 class="visually-hidden">Портфолио работ</h2>
+        <ul class="button-list">
+          <li class="button-list-item">
             <button type="button" class="portfolio">Все</button>
           </li>
-          <li>
+          <li class="button-list-item">
             <button type="button" class="portfolio">Веб-сайты</button>
           </li>
-          <li>
+          <li class="button-list-item">
             <button type="button" class="portfolio">Приложения</button>
           </li>
-          <li>
+          <li class="button-list-item">
             <button type="button" class="portfolio">Дизайн</button>
           </li>
-          <li>
+          <li class="button-list-item">
             <button type="button" class="portfolio">Маркетинг</button>
           </li>
         </ul>
-        <ul>
-          <li>
-            <a href="./images/portfolio-filter-1.jpg" class="portfolio-filter-1"
+        <ul class="portfolio">
+          <li class="portfolio-item">
+            <a href="./images/portfolio-filter-1.jpg" class="portfolio-filter"
               ><img
                 src="./images/portfolio-filter-1.jpg"
                 alt="portfolio-filter-1"
                 width="370"
               />
+              <div class="portfolio-description">
               <h2 class="portfolio-filter">Технокряк</h2>
               <p class="portfolio-filter">Веб-сайт</p>
+              </div>
             </a>
           </li>
-          <li>
-            <a href="./images/portfolio-filter-2.jpg" class="portfolio-filter-2"
+          <li class="portfolio-item">
+            <a href="./images/portfolio-filter-2.jpg" class="portfolio-filter"
               ><img
                 src="./images/portfolio-filter-2.jpg"
                 alt="portfolio-filter-2"
                 width="370"
               />
+              <div class="portfolio-description">
               <h2 class="portfolio-filter">Постер New Orlean vs Golden Star</h2>
-              <p class="portfolio-filter">Дизайн</p>
+              <p class="portfolio-filter">Дизайн</p></div>
             </a>
           </li>
-          <li>
-            <a href="./images/portfolio-filter-3.jpg" class="portfolio-filter-3"
+          <li class="portfolio-item">
+            <a href="./images/portfolio-filter-3.jpg" class="portfolio-filter"
               ><img
                 src="./images/portfolio-filter-3.jpg"
                 alt="portfolio-filter-3"
                 width="370"
               />
+              <div class="portfolio-description">
               <h2 class="portfolio-filter">Ресторан Seafood</h2>
-              <p class="portfolio-filter">Приложение</p>
+              <p class="portfolio-filter">Приложение</p></div>
             </a>
           </li>
-          <li>
-            <a href="./images/portfolio-filter-4.jpg" class="portfolio-filter-4"
+          <li class="portfolio-item">
+            <a href="./images/portfolio-filter-4.jpg" class="portfolio-filter"
               ><img
                 src="./images/portfolio-filter-4.jpg"
                 alt="portfolio-filter-4"
                 width="370"
               />
+              <div class="portfolio-description">
               <h2 class="portfolio-filter">Проект Prime</h2>
-              <p class="portfolio-filter">Маркетинг</p>
+              <p class="portfolio-filter">Маркетинг</p></div>
             </a>
           </li>
-          <li>
-            <a href="./images/portfolio-filter-5.jpg" class="portfolio-filter-5"
+          <li class="portfolio-item">
+            <a href="./images/portfolio-filter-5.jpg" class="portfolio-filter"
               ><img
                 src="./images/portfolio-filter-5.jpg"
                 alt="portfolio-filter-5"
                 width="370"
               />
+              <div class="portfolio-description">
               <h2 class="portfolio-filter">Проект Boxes</h2>
-              <p class="portfolio-filter">Приложение</p>
+              <p class="portfolio-filter">Приложение</p></div>
             </a>
           </li>
-          <li>
-            <a href="./images/portfolio-filter-6.jpg" class="portfolio-filter-6"
+          <li class="portfolio-item">
+            <a href="./images/portfolio-filter-6.jpg" class="portfolio-filter"
               ><img
                 src="./images/portfolio-filter-6.jpg"
                 alt="portfolio-filter-6"
                 width="370"
               />
+              <div class="portfolio-description">
               <h2 class="portfolio-filter">Inspiration has no Borders</h2>
-              <p class="portfolio-filter">Веб-сайт</p>
+              <p class="portfolio-filter">Веб-сайт</p></div>
             </a>
           </li>
-          <li>
-            <a href="./images/portfolio-filter-7.jpg" class="portfolio-filter-7"
+          <li class="portfolio-item">
+            <a href="./images/portfolio-filter-7.jpg" class="portfolio-filter"
               ><img
                 src="./images/portfolio-filter-7.jpg"
                 alt="portfolio-filter-7"
                 width="370"
               />
+              <div class="portfolio-description">
               <h2 class="portfolio-filter">Издание Limited Edition</h2>
-              <p class="portfolio-filter">Дизайн</p>
+              <p class="portfolio-filter">Дизайн</p></div>
             </a>
           </li>
-          <li>
-            <a href="./images/portfolio-filter-8.jpg" class="portfolio-filter-8"
+          <li class="portfolio-item">
+            <a href="./images/portfolio-filter-8.jpg" class="portfolio-filter"
               ><img
                 src="./images/portfolio-filter-8.jpg"
                 alt="portfolio-filter-8"
                 width="370"
               />
+              <div class="portfolio-description">
               <h2 class="portfolio-filter">Проект LAB</h2>
               <p class="portfolio-filter">Маркетинг</p>
+            </div>
             </a>
           </li>
-          <li>
-            <a href="./images/portfolio-filter-9.jpg" class="portfolio-filter-9"
-              ><img
+          <li class="portfolio-item">
+            <a href="./images/portfolio-filter-9.jpg" class="portfolio-filter"
+              >
+              <img
                 src="./images/portfolio-filter-9.jpg"
                 alt="portfolio-filter-9"
                 width="370"
               />
+              <div class="portfolio-description">
               <h2 class="portfolio-filter">Growing Business</h2>
               <p class="portfolio-filter">Приложение</p>
+              </div>
             </a>
           </li>
         </ul>
+      </div>
       </section>
     </main>
     <footer>
+      <div class="container">
       <a href=" " lang="en">
         <span class="web-footer">Web</span
         ><span class="studio-footer">Studio</span>
@@ -179,10 +198,9 @@
       <address>
         <p class="address">г. Киев, пр-т Леси Украинки, 26</p>
         <ul>
-          <li>
-            <a href="mailto:info@example.com" class="contact-third"
-              >info@example.com</a
-            >
+          <li class="footer-mail">
+            <a href="mailto:info@example.com" class="contact-third mail"
+              >info@example.com</a>
           </li>
           <li>
             <a href="tel:+380991111111" class="contact-third"
@@ -191,6 +209,7 @@
           </li>
         </ul>
       </address>
+    </div>
     </footer>
   </body>
 </html>

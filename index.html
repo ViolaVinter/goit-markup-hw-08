@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="style.css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,155 +15,148 @@
     />
   </head>
   <body>
-    <header>
-      <a href=" " lang="en" class="webstudio">
-        <span class="web">Web</span><span class="studio">Studio</span></a
-      >
-      <nav>
+    <header class="header">
+      <div class="container">
+        <nav class="main-nav">
         <!--Хедер-Студия-Портфолио-Контакты-->
+        <a href=" " lang="en" class="webstudio">
+          <span class="web">Web</span><span class="studio">Studio</span></a
+        >
         <ul class="contact">
-          <li>
+          <li class="contact-first">
             <a href="./index.html" class="contact-first current">Студия</a>
           </li>
-          <li>
-            <a href="./portfolio.html" class="contact-first">Портфолио</a>
+          <li class="contact-first">
+            <a href="./portfolio.html" class="contact-first portfolio">Портфолио</a>
           </li>
-          <li>
-            <a href="" class="contact-first">Контакты</a>
+          <li class="contact-first">
+            <a href="" class="contact-first ">Контакты</a>
           </li>
         </ul>
       </nav>
       <!--Хедер почта-телефон-->
       <ul class="contact-second">
-        <li>
-          <a href="mailto:info@devstudio.com" class="contact-second"
+        <li class="contact-second">
+          <a href="mailto:info@devstudio.com" class="contact-second mail"
             >info@devstudio.com</a
           >
         </li>
-        <li>
-          <a href="tel:+380961111111" class="contact-second"
+        <li class="contact-second">
+          <a href="tel:+380961111111" class="contact-second tel"
             >+38 096 111 11 11</a
           >
         </li>
       </ul>
+    </div>
     </header>
     <main>
-      <section class="first-section">
-        <h1>Эффективные решения для вашего бизнеса</h1>
-        <button type="button" class="order">Заказать услугу</button>
+      <section class="hero section">
+        <div class="container">
+          <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
+          <button type="button" class="hero-button">Заказать услугу</button>
+        </div>
       </section>
-      <section>
-        <!--<h2>Преимущества</h2>-->
-        <ul>
-          <li>
-            <h3 class="advantages">Внимание к деталям</h3>
-            <p class="advantages">
-              Идейные соображения, а также начало повседневной работы по
-              формированию позиции.
-            </p>
-          </li>
+      <section class="nobottom section">
+        <div class="container">
+        <h2 class="visually-hidden">Преимущества веб студии</h2>
+        <ul class="feature-list">
+            <li class="feature-list-item">
+                <h3 class="feature-list-title">Внимание к деталям</h3>
+                <p class="text">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
+            </li>
+            <li class="feature-list-item">
+                <h3 class="feature-list-title">Пунктуальность</h3>
+                <p class="text">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
+            </li>
+            <li class="feature-list-item">
+                <h3 class="feature-list-title">Планирование</h3>
+                <p class="text">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
+            </li>
+            <li class="feature-list-item">
+                <h3 class="feature-list-title">Современные технологии</h3>
+                <p class="text">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
+            </li>
         </ul>
-        <ul>
-          <li>
-            <h3 class="advantages">Пунктуальность</h3>
-            <p class="advantages">
-              Задача организации, в особенности же рамки и место обучения кадров
-              влечет за собой.
-            </p>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <h3 class="advantages">Планирование</h3>
-            <p class="advantages">
-              Равным образом консультация с широким активом в значительной
-              степени обуславливает.
-            </p>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <h3 class="advantages">Современные технологии</h3>
-            <p class="advantages">
-              Значимость этих проблем настолько очевидна, что реализация
-              плановых заданий.
-            </p>
-          </li>
-        </ul>
-      </section>
-      <section>
+        </div>
+    </section>
+      <section class="section">
+        <div class="container">
         <h2 class="activity">Чем мы занимаемся</h2>
-        <ul>
+        <ul class="activity">
           <li>
-            <img
+            <img class="images-list-item"
               src="./images/profession-1.jpg"
               alt="profession-1"
               width="370"
             />
           </li>
           <li>
-            <img
+            <img class="images-list-item"
               src="./images/profession-2.jpg"
               alt="profession-2"
               width="370"
             />
           </li>
           <li>
-            <img
+            <img class="images-list-item"
               src="./images/profession-3.jpg"
               alt="profession-3"
               width="370"
             />
           </li>
         </ul>
+      </div>
       </section>
-      <section class="personal">
+      <section class="personal section">
+        <div class="container team">
         <h2 class="personal">Наша команда</h2>
-        <ul>
-          <li>
-            <div class="personal-first">
+        <ul class="cards-list">
+          <li class="cards-list-item">
               <img
                 src="./images/product-designer.jpg"
                 alt="product-designer"
                 width="270"
               />
+              <div class="personal">
               <h3 class="personal">Игорь Демьяненко</h3>
               <p class="personal">Product Designer</p>
             </div>
           </li>
-          <li>
-            <div class="personal-second">
-              <img
+          <li class="cards-list-item">
+               <img
                 src="./images/frontend-developer.jpg"
                 alt="frontend-developer"
                 width="270"
               />
+              <div class="personal">
               <h3 class="personal">Ольга Репина</h3>
               <p class="personal">Frontend Developer</p>
             </div>
           </li>
-          <li>
-            <div class="personal-third">
+          <li class="cards-list-item">
               <img src="./images/marketing.jpg" alt="marketing" width="270" />
+              <div class="personal">
               <h3 class="personal">Николай Тарасов</h3>
               <p class="personal">Marketing</p>
             </div>
           </li>
-          <li>
-            <div class="personal-fourth">
+          <li class="cards-list-item">
               <img
                 src="./images/ui-designer.jpg"
                 alt="ui-designer"
                 width="270"
               />
+              <div class="personal">
               <h3 class="personal">Михаил Ермаков</h3>
               <p class="personal">UI Designer</p>
             </div>
           </li>
         </ul>
+        </div>
       </section>
-    </main>
+       </main>
     <footer>
+      <div class="container">
       <a href=" " lang="en">
         <span class="web-footer">Web</span
         ><span class="studio-footer">Studio</span>
@@ -170,18 +164,17 @@
       <address>
         <p class="address">г. Киев, пр-т Леси Украинки, 26</p>
         <ul>
-          <li>
-            <a href="mailto:info@example.com" class="contact-third"
-              >info@example.com</a
-            >
+          <li class="footer-mail">
+            <a href="mailto:info@example.com" class="contact-third mail"
+              >info@example.com</a>
           </li>
           <li>
             <a href="tel:+380991111111" class="contact-third"
-              >+38 099 111 11 11</a
-            >
+              >+38 099 111 11 11</a>
           </li>
         </ul>
       </address>
+    </div>
     </footer>
   </body>
 </html>
