@@ -70,7 +70,8 @@ header div.container{
 }
 .section{
   display: block;
-  padding: 94px 0 0;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 /*nav*/
 
@@ -246,7 +247,9 @@ a.contact-second:focus {
   line-height: 1.71;
 }
 /*Чем мы занимаемся*/
-
+.nobottom.section {
+  padding-bottom: 0px;
+}
 h2.activity {
   font-weight: bold;
   font-size: 36px;
@@ -268,6 +271,7 @@ ul.activity{
 .images-list-item {
   width: 370px;
 }
+
 /*Наша команда*/
 
 section.personal {
