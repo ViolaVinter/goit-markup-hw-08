@@ -186,9 +186,6 @@ a.contact-second:hover,
 a.contact-second:focus {
   color: var(--accent-text-color);
 }
-li.contact-second.tel{
-  margin-left: 50px;
-}
 
 /*Наши преимущества*/
 .nobottom.section {
