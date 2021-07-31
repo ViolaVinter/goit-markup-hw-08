@@ -69,7 +69,6 @@ header div.container{
   justify-content: space-between;
 }
 .section{
-  display: block;
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -79,7 +78,9 @@ nav.main-nav,ul.contact{
   display: flex;
   align-items: center;
 }
-li.contact-first.contact-second:not(:last-child){
+
+li.contact-second:not(:last-child),
+.list:not(:last-child){
   margin-right: 50px;
 }
 /*webstudio*/
@@ -102,22 +103,14 @@ span.studio {
   color: var(--primary-text-color);
   text-decoration: none;
 }
+
 /*main-nav*/
 ul.contact{
-  width: 294px;
-  justify-content: space-between;
   margin-left: 93px;
 }
 .contact-first{
   display: block;
   padding: 32px 0;
-  width: 68px;
-}
-.contact-first current{
-  width: 49px; 
-}
-.contact-first portfolio{
-  width: 77px;
 }
 
 /*nav-contacts*/
@@ -125,12 +118,6 @@ ul.contact-second{
   display:flex;
   margin-left: auto;}
 
-  a.contact-second.mail{
-    width: 135px;
-  }
-  a.contact-second.tel{
-    width: 122px;
-  }
 /*Hero section*/
 .hero {
   background-color: var(--second-bcg-text-color);
@@ -199,7 +186,7 @@ a.contact-second:hover,
 a.contact-second:focus {
   color: var(--accent-text-color);
 }
-.contact-second.tel{
+li.contact-second.tel{
   margin-left: 50px;
 }
 
@@ -256,7 +243,6 @@ h2.activity {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  padding:94px 0 50px;
 }
 .activity{
   min-width: 376px;
@@ -265,8 +251,11 @@ h2.activity {
   justify-content:center ;
 }
 ul.activity{
-  justify-content: space-between;
-  padding-top:50px;
+  margin-top:50px;
+}
+li.activity-list:not(:last-child)
+{
+ margin-right: 30px;
 }
 .images-list-item {
   width: 370px;
@@ -277,15 +266,10 @@ ul.activity{
 section.personal {
   background: var(--second-bcg-color); 
 }
-.team{
-  margin-left: auto;
-  margin-right: auto;
-}
 h2.personal {
   font-weight: bold;
   font-size: 36px;
-  line-height: 1.17px;
-  /*letter-spacing: 0.03em;*/
+  line-height: 1.17;
   text-align: center;
   margin-top: 0;
   margin-bottom: 50px;
@@ -294,11 +278,11 @@ h3.personal {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  margin-bottom: 10px;
 }
 p.personal {
   font-size: 16px;
   line-height: 1.19;
-  /*letter-spacing: 0.03em;*/
   color: var(--second-bcg-text-color);
 }
 .cards-list-item {
@@ -309,8 +293,9 @@ p.personal {
 }
 div.personal
 {
-  padding: 30px 55px 30px 55px;
-  text-align: center; 
+  padding: 30px;
+  text-align: center;
+  background-color: var(--no-accent-text-color); 
 }
 /*Футер*/
 footer {
@@ -323,8 +308,6 @@ footer {
   font-size: 26px;
   line-height: 1.19;
   color: var(--accent-text-color);
-  display: inline-block;
-  margin-bottom: 20px;
 }
 .studio-footer {
   font-family: Raleway;
@@ -332,8 +315,11 @@ footer {
   font-size: 26px;
   line-height: 1.19;
   color: var(--no-accent-text-color);
+}
+a.footer-logo{
   display: inline-block;
   margin-bottom: 20px;
+
 }
 p.address {
   font-style:normal;
@@ -354,12 +340,12 @@ a.contact-third {
   letter-spacing: 0.02em;
   color: var(--second-text-color);
   display: inline-block;
-  margin-bottom: 9px;
   color:rgba(255, 255, 255, 0.6);
 }
 
 .footer-mail {
-  margin-top: 9px;
+  display:inline-block;
+  margin-bottom: 9px;
 }
 
 /*PORTFOLIO*/
