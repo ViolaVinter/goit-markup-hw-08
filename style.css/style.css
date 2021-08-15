@@ -408,6 +408,11 @@ svg.customers-icons{
   fill:#AFB1B8;
   
 }
+.customers-link:hover,
+.customers-link:focus{ 
+  border:1px solid var(--accent-text-color);
+  }
+
 .customers-link:hover .customers-icons,
 .customers-link:focus .customers-icons{ 
   fill: var(--accent-text-color);
