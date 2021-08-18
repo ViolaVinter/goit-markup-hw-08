@@ -60,7 +60,7 @@
       <section class="hero section">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="hero-button">Заказать услугу</button>
+          <button type="button" class="hero-button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
       <section class="nobottom section">
@@ -106,34 +106,50 @@
         </ul>
         </div>
     </section>
-      <section class="section">
-        <div class="container">
-        <h2 class="activity">Чем мы занимаемся</h2>
-        <ul class="activity">
-          <li class="activity-list">
+    <section class="section">
+      <div class="container">
+      <h2 class="activity">Чем мы занимаемся</h2>
+      <ul class="activity">
+        <li class="activity-list">
+          <div class="presentation-thumb">
             <img class="images-list-item"
-              src="./images/profession-1.jpg"
-              alt="profession-1"
-              width="370"
+            src="./images/profession-1.jpg"
+            alt="profession-1"
+            width="370"
             />
-          </li>
-          <li class="activity-list">
+            <div class="presentation-overlay">
+              <p class="presentation-name">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</p>
+            </div>
+          </div>
+        </li>
+        <li class="activity-list">
+          <div class="presentation-thumb">
             <img class="images-list-item"
-              src="./images/profession-2.jpg"
-              alt="profession-2"
-              width="370"
+            src="./images/profession-2.jpg"
+            alt="profession-2"
+            width="370"
             />
-          </li>
-          <li class="activity-list">
+            <div class="presentation-overlay">
+              <p class="presentation-name">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</p>
+            </div>
+          </div>
+        </li>
+        <li class="activity-list">
+          <div class="presentation-thumb">
             <img class="images-list-item"
-              src="./images/profession-3.jpg"
-              alt="profession-3"
-              width="370"
+            src="./images/profession-3.jpg"
+            alt="profession-3"
+            width="370"
             />
-          </li>
-        </ul>
-      </div>
-      </section>
+            <div class="presentation-overlay">
+              <p class="presentation-name">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    </section>
+
       <section class="personal section">
         <div class="container team">
         <h2 class="personal">Наша команда</h2>
@@ -157,7 +173,7 @@
                 </li>
                 <li class="net">
                   <a href="#" class="net">
-                    <svg class="networks" width=20px height=16,25px>
+                    <svg class="networks" width=20px height=20px>
                       <use href="./images/icons.svg#twitter"></use>
                     </svg>
                   </a>
@@ -198,7 +214,7 @@
               </li>
               <li class="net">
                 <a href="#" class="net">
-                  <svg class="networks" width=20px height=16,25px>
+                  <svg class="networks" width=20px height=20px>
                     <use href="./images/icons.svg#twitter"></use>
                   </svg>
                 </a>
@@ -235,7 +251,7 @@
                 </li>
                 <li class="net">
                   <a href="#" class="net">
-                    <svg class="networks" width=20px height=16,25px>
+                    <svg class="networks" width=20px height=20px>
                       <use href="./images/icons.svg#twitter"></use>
                     </svg>
                   </a>
@@ -276,7 +292,7 @@
                 </li>
                 <li class="net">
                   <a href="#" class="net">
-                    <svg class="networks" width=20px height=16,25px>
+                    <svg class="networks" width=20px height=20px>
                       <use href="./images/icons.svg#twitter"></use>
                     </svg>
                   </a>
@@ -407,5 +423,15 @@
         </div>
     </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="icon-close" data-modal-close>
+          <svg  class="icon-close" width=11px height=11px >
+            <use href="./images/icons.svg#closebutton"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./modal.js"></script>
   </body>
 </html>

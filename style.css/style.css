@@ -8,6 +8,7 @@
   --border-header-color:#ECECEC;
   --button-change-color:#188ce8;
   --portfolio-item-gap: 30px;
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*  #212121 - цвет основного текста*/
@@ -147,7 +148,7 @@ h1.hero-title{
 }
 /*Кнопка "Заказать услугу"*/
 .hero-button {
-  background: var(--accent-text-color);
+  background-color: var(--accent-text-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border:none;
@@ -157,11 +158,64 @@ h1.hero-title{
   line-height: 1.88;
   color: var(--no-accent-text-color);
   padding: 10px 32px;
+  transition: background-color var(--transition), box-shadow var(--transition);
 }
 .hero-button:hover,
 .hero-button:focus{
  background-color: var(--button-change-color);
 }
+/*Модальное окно*/
+div.backdrop{
+  position:fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0, 0, 0, 0.2);
+  opacity:1;
+  transition:opacity var(--transition), visibility var(--transition);
+}
+div.backdrop.is-hidden{
+  opacity:0;
+  pointer-events: none;
+  visibility: hidden;
+
+}
+div.modal{
+  position:absolute;
+  min-width: 528px;
+  min-height: 581px;
+  background-color: var(--no-accent-text-color);
+  position: absolute;
+  top:50%;
+  left:50%;
+  border-radius: 4px;
+  box-shadow:
+  0px 1px 3px rgba(0, 0, 0, 0.12),
+  0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--transition);
+}
+
+button.icon-close{
+  position: absolute;
+  fill:var(--primary-text-color);
+  padding:9px;
+  top:8px;
+  right:8px;
+  border-radius:50%;
+  border-color:rgba(0, 0, 0, 0.1);
+  border-width: 1px solid;
+  background-color: var(--no-accent-text-color);
+  display: flex;
+  text-align: center;
+  transform: scale(1);
+  transition:transform var(--transition);
+}
+
 
 /*Хедер Студия-Портфолио-Контакты*/
 
@@ -171,7 +225,10 @@ a.contact-first {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  position: relative;
+  transition: color var(--transition);
 }
+
 /*Хедер почта-телефон*/
 a.contact-second {
   font-weight: 500;
@@ -182,6 +239,7 @@ a.contact-second {
   text-decoration: none;
   display: flex;
   align-items: center;
+  transition: color var(--transition);
 }
 /*Active navigation*/
 svg.contacts.mail{
@@ -189,12 +247,14 @@ svg.contacts.mail{
   height: 12px;
   margin-right: 10px;
   fill:#757575;
+  transition: color var(--transition);
   }
   svg.contacts.phone{
     width: 10px;
     height: 16px;
     margin-right: 10px;
     fill:#757575;
+    transition: color var(--transition);
   }
   
   a.contact-first:hover,
@@ -221,6 +281,25 @@ a.contact-second:focus {
 
 .contact-first.current{
   color: var(--accent-text-color);
+}
+
+a.contact-first.current::after{
+  position: absolute;
+  content: '';
+  display: block;
+  bottom: -1px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-text-color);
+  transform:scale(1);
+  transition: transform var(--transition);
+}
+a.contact-first.current:hover::after{
+  transform:scale(1.2);
+}
+a.contact-first.current:focus::after{
+  transform:scale(1.2);
 }
 
 /*Наши преимущества*/
@@ -290,6 +369,7 @@ div.group:not(:last-child){
 /*Чем мы занимаемся*/
 .nobottom.section {
   padding-bottom: 0px;
+  
 }
 h2.activity {
   font-weight: bold;
@@ -313,6 +393,31 @@ li.activity-list:not(:last-child)
 }
 .images-list-item {
   width: 370px;
+}
+div.presentation-thumb{
+  position: relative;
+  width: 370px;
+}
+div.presentation-overlay{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+p.presentation-name{
+font family: Roboto;
+font style: 900;
+font size: 14px;
+line height: 1.14;
+line height: 100%;
+align: center;
+vertical align: top;
+letter spacing: 3%;
+color: #fff;
 }
 
 /*Наша команда*/
@@ -340,7 +445,7 @@ p.personal {
   color: var(--second-text-color);
 }
 .cards-list-item {
-  /*background-color: var(--background-color-main);*/
+ 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -361,29 +466,31 @@ ul.icons{
 a.net{
   width: 44px;
   height: 44px;
-  background-color:#ffffff;
-  border-color: #ffffff;
+  background-color:var(--no-accent-text-color);
+  /*border-color: var(--no-accent-text-color);*/
   padding:0px;
   border-width: 0px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
+  transition: background-color var(--transition);
 }
 svg.networks{
   
   fill:#AFB1B8;
+  transition: fill var(--transition);
 }
 .net:not(:last-child){
   margin-right: 10px;
+}
+.net:hover .networks{
+  fill:var(--no-accent-text-color);
 }
 .net:hover{
   background-color:#2196f3;
   border-radius: 50%;
 }
-.net:hover .networks{
-  fill:#ffffff;
-}
-
 /*Секция клиентов*/
 ul.customers{
   display: flex;
@@ -398,6 +505,7 @@ a.customers-link{
   width: 170px;
   height: 92px;
   border:1px solid #AFB1B8;
+  transition: border var(--transition);
 }
 svg.customers-icons{
   display: flex;
@@ -406,6 +514,7 @@ svg.customers-icons{
   width: 106px;
   height: 60px;
   fill:#AFB1B8;
+  transition:  fill var(--transition);
   
 }
 .customers-link:hover,
@@ -452,10 +561,6 @@ p.address {
   color: var(--no-accent-text-color);
   margin: 0 0 9px 0;
 }
-a.contact-third:hover,
-a.contact-third:focus {
-  color: var(--accent-text-color);
-}
 a.contact-third {
   font-style:normal;
   font-weight: 500;
@@ -465,6 +570,11 @@ a.contact-third {
   color: var(--second-text-color);
   display: inline-block;
   color:rgba(255, 255, 255, 0.6);
+  transition: color var(--transition);
+}
+a.contact-third:hover,
+a.contact-third:focus {
+  color: var(--accent-text-color);
 }
 
 .footer-mail {
@@ -488,6 +598,8 @@ svg.networks-footer{
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color var(--transition);
+  
 }
 .fill:hover{
   background-color:var(--accent-text-color);
@@ -536,6 +648,7 @@ button.portfolio {
   border-radius: 4px;
   border: none;
   padding: 6px 22px;
+  transition: background-color var(--transition),color var(--transition), box-shadow var(--transition);
 }
 
 button.portfolio:hover,
@@ -589,6 +702,7 @@ a.portfolio-filter{
   text-decoration: none;
   margin-right:0;
   display:block;
+  transition: box-shadow var(--transition);
 }
 
 a.portfolio-filter:hover,
@@ -597,4 +711,38 @@ a.portfolio-filter:focus
   box-shadow: 0px 1px 1px rgba(0,0,0,0.12),
               0px 4px 4px rgba(0,0,0,0.06),
               1px 4px 6px rgba(0,0,0,0.16);
+}
+
+.portfolio-thumb{
+  position: relative;
+  overflow:hidden;
+  
+}
+.portfolio-overlay{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:100%;
+  left: 0;
+  
+  color:#ffffff;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(0%);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+ 
+  
+
+}
+.portfolio-filter:hover .portfolio-overlay{
+  
+
+  transform: translateY(-100%);
 }
