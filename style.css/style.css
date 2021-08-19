@@ -247,14 +247,14 @@ svg.contacts.mail{
   height: 12px;
   margin-right: 10px;
   fill:#757575;
-  transition: color var(--transition);
+  transition: fill var(--transition);
   }
   svg.contacts.phone{
     width: 10px;
     height: 16px;
     margin-right: 10px;
     fill:#757575;
-    transition: color var(--transition);
+    transition: fill var(--transition);
   }
   
   a.contact-first:hover,
@@ -322,9 +322,7 @@ div.group{
   margin-bottom: 30px;
 }
 
-div.group:not(:last-child){
-  margin-right: 30px;
-}
+
 .section-title {
   margin-top: 0;
   margin-bottom: 50px;
@@ -410,7 +408,7 @@ div.presentation-overlay{
 }
 p.presentation-name{
 font family: Roboto;
-font style: 900;
+font style: bold;
 font size: 14px;
 line height: 1.14;
 line height: 100%;
@@ -484,11 +482,13 @@ svg.networks{
 .net:not(:last-child){
   margin-right: 10px;
 }
-.net:hover .networks{
+.net:hover .networks,
+.net:focus .networks{
   fill:var(--no-accent-text-color);
 }
-.net:hover{
-  background-color:#2196f3;
+.net:hover,
+.net:focus{
+  background-color:var(--accent-text-color);3;
   border-radius: 50%;
 }
 /*Секция клиентов*/
@@ -601,7 +601,8 @@ svg.networks-footer{
   transition: background-color var(--transition);
   
 }
-.fill:hover{
+.fill:hover,
+.fill:focus{
   background-color:var(--accent-text-color);
 }
   
