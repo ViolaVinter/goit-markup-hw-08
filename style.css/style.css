@@ -228,13 +228,13 @@ button.icon-close:hover{
   font-weight: bold;
   font-size: 20px;
   line-height: 1.15;
-  
   letter-spacing: 0.03em;
 }
 
 .form-field{
   margin-top: 30px;
   margin-left:41px;
+  transition: border-color var(--transition);
   
 }
 .form-field:not(:first-child){
@@ -317,10 +317,44 @@ span.contract-text{
   margin-top:20px;
   margin-left:54px;
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
 }
+.label{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.contract-checkbox{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  
+}
+.checkbox-icon{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--primary-text-color);
+  
+  
+}
+.contract-checkbox:checked + .checkbox-icon{
 
+  background-image: url(../images/icon-first-one.svg);
+  border:none;
+ background-origin: border-box;
 
+background-size: contain;
+}
 a.contract-link{
   font-family: inherit;
   font-weight: 400;
@@ -333,8 +367,8 @@ a.contract-link{
 .modal-button{
   width: 200px;
   height: 50px;
-  background-color: var(--button-change-color);
-  color: var(--no-accent-text-color);
+  background-color: var(--accent-text-color);
+  color: var(--no-accent-text-color);;
   margin: 30px 163px 40px 165px;
   padding: 10px 55px 10px 56px;
   font-weight: 700;
@@ -344,7 +378,14 @@ a.contract-link{
   font-family: Roboto;
   border: none;
   border-radius: 4px;
+  box-shadow:
+  0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color var(--transition);
 
+}
+.modal-button:hover,
+.modal-button:focus{
+  background-color: var(--button-change-color);
 }
 /*Хедер Студия-Портфолио-Контакты*/
 
@@ -536,14 +577,14 @@ div.presentation-overlay{
   background-color: rgba(47, 48, 58, 0.8);
 }
 p.presentation-name{
-font family: Roboto;
-font style: bold;
-font size: 14px;
-line height: 1.14;
-line height: 100%;
-align: center;
-vertical align: top;
-letter spacing: 3%;
+font-family: Roboto;
+font-style: bold;
+font-size: 14px;
+line-height: 1.14;
+line-height: 100%;
+
+vertical-align: top;
+letter-spacing: 3%;
 color: #fff;
 }
 
@@ -617,7 +658,7 @@ svg.networks{
 }
 .net:hover,
 .net:focus{
-  background-color:var(--accent-text-color);3;
+  background-color:var(--accent-text-color);
   border-radius: 50%;
 }
 /*Секция клиентов*/
@@ -921,7 +962,6 @@ a.portfolio-filter:focus
   height: 100%;
   top:100%;
   left: 0;
-  
   color:#ffffff;
   font-size: 18px;
   line-height: 1.55;
@@ -929,12 +969,7 @@ a.portfolio-filter:focus
   padding: 63px 24px;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(0%);
-
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
- 
-  
-
 }
 .portfolio-filter:hover .portfolio-overlay{
   
