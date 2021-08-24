@@ -183,8 +183,8 @@ div.backdrop.is-hidden{
 }
 div.modal{
   position:absolute;
-  min-width: 528px;
-  min-height: 581px;
+  width: 528px;
+  height: 581px;
   background-color: var(--no-accent-text-color);
   position: absolute;
   top:50%;
@@ -269,10 +269,12 @@ span.contract-text{
   border-radius:4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
  position: relative;
+ outline:none;
 }
 
 .form-textarea{
   margin-top:4px;
+  padding:12px 16px;
   width: 448px;
   height: 120px;
   resize: none;
@@ -282,9 +284,11 @@ span.contract-text{
   font-weight:400;
   font-size:14px;
   line-height:1.17;
-  letter-spacing: 0.01;
+  outline:none;
+  color:rgba(117, 117, 117, 0,5);
 }
-.form-textarea::placeholder {
+::placeholder{
+  
   margin-left:16px;
   margin-top:12px;
   color:rgba(117, 117, 117, 0,5);
@@ -310,6 +314,9 @@ span.contract-text{
 }
 .form-field:focus-within .form-icon{
   fill:var(--accent-text-color);
+}
+.form-field:focus-within .form-textarea{
+  border-color:  var(--accent-text-color);
 }
 
 
@@ -840,12 +847,10 @@ input.subscribe{
   border:1px solid rgba(255, 255, 255, 0.3);
   border-radius:4px;
   color:#fff;
+  padding-left:16px;
 }
 button.subscribe{
-  display: flex;
-  align-items: center;
   position:relative;
-
   width: 200px;
   height: 50px;
   margin-left: 12px;
@@ -861,9 +866,7 @@ button.subscribe{
   font-family: Roboto;
   
 }
-input.subscribe::placeholder{
-  transform: translateX(16px);
-}
+
 svg.subscribe{
   fill:#ffffff;
   position: absolute;
@@ -972,7 +975,5 @@ a.portfolio-filter:focus
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-filter:hover .portfolio-overlay{
-  
-
   transform: translateY(-100%);
 }

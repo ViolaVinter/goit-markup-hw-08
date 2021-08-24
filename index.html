@@ -420,20 +420,19 @@
               </svg>
               </a>
             </li>
-        </div>
+          </ul>
+          </div>
         <div class="subscribe">
           <b class="subscribe">ПОДПИШИТЕСЬ НА РАССЫЛКУ</b>
               <div class="form">
-                <form name="signup_form" autocomplete="on" novalidate></form>
+                <form name="signup_form" autocomplete="on" novalidate>
               <input type="email" name="email"  placeholder="E-mail" class="subscribe"/>
-            
-            </form>
             <button type="submit" class="subscribe">Подписаться  
             <svg  class="subscribe" width=24px height=24px>
               <use href="./images/icons.svg#plane"></use>
             </svg>
           </button>
-          
+        </form>
             </div>
         </div>
   </div>
@@ -480,27 +479,22 @@
             
          <div class="form-field">
             <label class="form-label">Комментарий
-              <textarea name="" id=""  placeholder=" Введите текст" class="form-textarea"></textarea>
+              <textarea name="textarea"  placeholder=" Введите текст" class="form-textarea"></textarea>
             </label>
           </div>
+        
           <div class="contract">
            <label class="label">
             <input type="checkbox" class="contract-checkbox" name="checkbox">
-            <span class="checkbox-icon">
-             
-            </span>
-           </label>
-           
+            <span class="checkbox-icon"> </span>
               <span class="contract-text">Соглашаюсь с рассылкой и принимаю <a href="#" class="contract-link"> Условия договора</a></span>
+            </label>
           </div>
-          
-            
-            <button type="submit" class="modal-button"> Отправить </button>
-          </div>
-
-        </form>
+             <button type="submit" class="modal-button"> Отправить </button>
+          </form>
+          </div>      
       </div>
-    </div>
+    
     <script src="./modal.js"></script>
   </body>
 </html>
