@@ -1,0 +1,60 @@
+.backdrop{
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color:$color-backdrop-bcg;
+    opacity:1;
+    transition:opacity $transition, visibility $transition;
+  }
+  .backdrop.is-hidden{
+    opacity:0;
+    pointer-events: none;
+    visibility: hidden;
+  
+  }
+  .modal{
+    position:absolute;
+    width: 528px;
+    height: 581px;
+    background-color: $color-no-accent-text-color;
+    position: absolute;
+    top:50%;
+    left:50%;
+    border-radius: 4px;
+    box-shadow:
+    0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform $transition;
+  }
+  
+  button.icon-close{
+    position: absolute;
+    fill:$color-primary-text-color;
+    padding:9px;
+    top:8px;
+    right:8px;
+    border-radius:50%;
+    border-color:$color-backdrop-border;
+    border-width: 1px;
+    border-style:solid;
+    background-color: $color-no-accent-text-color;
+    display: flex;
+    text-align: center;
+    transform: scale(1);
+    transition:transform $transition;
+    &:hover{
+      fill: $color-accent-text-color;
+      border-color: $color-accent-text-color;
+    }
+  }
+  
+  .modal-data{
+    margin-top:40px;
+    margin-left:41px;
+    @extend %fonts;
+  }
+  

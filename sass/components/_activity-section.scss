@@ -1,0 +1,38 @@
+
+.tit {
+    @extend %tit;
+    margin-bottom:50px;
+  }
+.activity{
+    min-width: 376px;
+    display: flex;
+    justify-content:center ;
+  }
+
+  
+  .activity__list:not(:last-child)
+  {
+   margin-right: 30px;
+  }
+  
+  .presentation{
+    position: relative;
+    .presentation__image{
+    width: 370px;}
+  }
+  
+  .overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: $color-overlay-activity;
+  }
+  .overlay__name{
+  @extend %overlay_name;
+  color: $color-no-accent-text-color;
+  }
+  

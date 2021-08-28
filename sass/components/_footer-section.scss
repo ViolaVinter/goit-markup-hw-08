@@ -1,0 +1,135 @@
+/*Футер*/
+footer {
+    background: $color-second-bcg-text-color;
+    padding: 60px 0 60px 0px;
+  }
+  .container{
+
+  .last{
+    display: flex;
+    align-items: baseline;
+    }
+  }
+  .footer__web {
+    @extend %logo;
+    color: $color-accent-text-color;
+  }
+  .footer__studio {
+    @extend %logo;
+    color: $color-no-accent-text-color;
+  }
+  .footer__logo{
+    display: inline-block;
+    margin-bottom: 20px;
+  
+  }
+  .address {
+    @extend %address;
+    color: $color-no-accent-text-color;
+    margin: 0 0 9px 0;
+  }
+   .address__link {
+    @extend %address__link;
+    color: $color-second-text-color;
+    display: inline-block;
+    color:$color-contact-footer;
+    transition: color $transition;
+    &:hover,
+    &:focus{
+        color: $color-accent-text-color;
+    }
+  }
+  .address__mail {
+    display:inline-block;
+    margin-bottom: 9px;
+  }
+  .networks__image{
+    
+    fill:$color-no-accent-text-color;
+    
+  }
+  .networks__link{
+    width: 44px;
+    height: 44px;
+    background-color: $color-fill-bcg-color;
+    border-radius: 50%;
+    border-color:$color-fill-border-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color $transition;
+    &:hover,
+    &:focus{
+        background-color:$color-accent-text-color;
+    } 
+  }
+  div.container.last{
+    display: flex;
+    align-items: baseline;
+    }
+ .join{
+      justify-content: center;
+      margin-left: 70px;
+    }
+  
+  .join__name{
+    @extend %footer_name;
+    color: $color-no-accent-text-color;
+    width: 145px;
+  }
+  
+  .networks{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .networks__list:not(:last-child){
+    margin-right: 10px;
+  }
+  /*ПОДПИСЫВАЙТЕСЬ*/
+  .subscribe{
+    margin-left: 93px;
+  }
+  
+  .subscribe__name{
+    @extend %footer_name;
+    color: $color-no-accent-text-color;
+    width: 145px;
+  }
+  .subscribe__form{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; 
+  }
+  
+  .subscribe__input{
+    width: 358px;
+    height: 50px;
+    background-color: $color-subscribe-bcg-color;
+    padding: 0px;
+    border:1px solid $color-subscribe-border;
+    border-radius:4px;
+    color:$color-no-accent-text-color;
+    padding-left:16px;
+  }
+  .subscribe__button{
+    position:relative;
+    width: 200px;
+    height: 50px;
+    margin-left: 12px;
+    padding: 10px 62px 10px 29px;
+    border: none;
+    border-radius: 4px;
+    background-color: $color-accent-text-color;
+    color: $color-no-accent-text-color;
+    @extend %subscribe_button;
+  }
+  
+  .subscribe__image{
+    fill:$color-no-accent-text-color;
+    position: absolute;
+    top:13px;
+    left:148px;
+  }
+  
+  

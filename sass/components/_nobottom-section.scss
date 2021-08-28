@@ -1,0 +1,56 @@
+/*Наши преимущества*/
+.nobottom.section {
+    padding-bottom: 0px;
+  }
+  div.new{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .feature__box{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 120px;
+    border-radius: 4px;
+    background-color: $color-second-bcg-color;
+    margin-bottom: 30px;
+  }
+  
+  
+  .section-title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    color: $color-primary-text-color;
+    @extend %tit;
+    text-align: center;
+  }
+  .feature,
+  .images-list,
+  .cards {
+    display: flex;
+  }
+  .feature__list:not(:last-child),
+  .images-list-item:not(:last-child),
+  .cards__list:not(:last-child)
+   {
+    margin-right: 30px;
+  }
+  .feature__list,
+  .cards__list {
+    width: 270px;
+  }
+  .feature__name {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: $color-primary-text-color;
+    @extend %footer_name;
+    text-transform: uppercase;
+  }
+  .feature__description {
+    display: block; 
+    margin-top: 0;
+    color: $color-second-text-color;
+    line-height: 1.71;
+  }
