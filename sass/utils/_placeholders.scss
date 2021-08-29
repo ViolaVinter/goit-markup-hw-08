@@ -1,88 +1,104 @@
 %fonts{
-    font-family: Roboto;
+    font-family: $fonts-main;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
-    letter-spacing: 0.03em;
+    letter-spacing: $letter-spacing-main;
 }
 %fonts-header{
-    font-family: Roboto;
+    font-family: $fonts-main;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
-    letter-spacing: 0.02em;
+    letter-spacing: $letter-spacing-contact;
 }
 %logo{
-    font-family: Raleway;
-    font-weight: bold;
+    font-family: $fonts-logo;
+    font-weight: 700;
+    letter-spacing: $letter-spacing-main;
     font-size: 26px;
     line-height: 1.19;
     text-decoration: none;
 }
 %tit{
+    font-family: $fonts-main;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
-    letter-spacing: 0.03em;
+    letter-spacing: $letter-spacing-main;
 }
 %overlay_name{
-    font-family: Roboto;
+  font-family: $fonts-main;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   line-height: 100%;
   vertical-align: top;
-  letter-spacing: 3%;
+  letter-spacing: $letter-spacing-main;
 }
 %address {
+    font-family: $fonts-main;
     font-style:normal;
     font-size: 14px;
+    font-weight: 400;
     line-height: 1.71;
+    letter-spacing:$letter-spacing-main;
 }
 %address__link {
+    font-family: $fonts-main;
     font-style:normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.14;
-    letter-spacing: 0.02em;
+    letter-spacing: $letter-spacing-contact;
 }
 %footer_name{
+    font-family: $fonts-main;
     font-style:bold;
     font-size: 14px;
     line-height: 1.14;
+    letter-spacing:$letter-spacing-main;
 }
 %subscribe_button{
+    font-family: $fonts-main; 
     font-weight: 700;
     font-size: 16px;
     line-height:1.88;
-    letter-spacing:0.06em;
-    font-family: Roboto; 
+    letter-spacing:$letter-spacing-caption;
+    
 }
 %hero_title{
+    font-family: $fonts-main; 
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    letter-spacing: 0.06em;
+    letter-spacing: $letter-spacing-caption;
     text-transform: uppercase;
 }
 %modal{
+    font-family: $fonts-main; 
     font-weight:400;
     line-height:1.17;
-    letter-spacing: 0.01;
+    letter-spacing: $letter-spacing-modal-form;
 }
 %personal__name{
+    font-family: $fonts-main; 
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
+    letter-spacing: $letter-spacing-main;
 }
 %menu__button{
+    font-family: $fonts-main; 
     font-weight: 500;
     font-size: 16px;
     line-height: 1.63;
+    letter-spacing: $letter-spacing-main;
 }
 %portfolio__overlay{
+    font-family: $fonts-main; 
     font-size: 18px;
     line-height: 1.55;
-    letter-spacing: 0.03em;
+    letter-spacing: $letter-spacing-main;
 }
