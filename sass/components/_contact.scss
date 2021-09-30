@@ -1,15 +1,78 @@
 
 .contact{
+  @media screen and (max-width:767px) {
+    display:none;
+    
+  }
+  @media screen and (min-width:768px) and (max-width:1199px){
     display:flex;
-    margin-left: auto;}
+    flex-direction: column;
+    margin-left: 70px;
+    
+  }
+    display:flex;
+    margin-left: 250px;
+  }
   
-.contact__list:not(:last-child),
+
 .nav__list:not(:last-child){
+  
   margin-right: 50px;
 }
+.contact__list:not(:last-child){
+  @media screen and (min-width:1200px){
+    margin-right: 50px;
+  }
+}
+
+.contact__list{
+  margin-bottom:10px;
+}
+.contact__mail{
+  @media screen and (min-width:768px) and (max-width: 1199px){
+  width: 14px;
+  height: 12px;
+  margin-right: 8px;
+  fill:$color-second-text-color;
+  transition: fill $transition;
+  font-size: 12px;
+  
+  }
+  @media screen and (min-width:1200px){
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    fill:$color-second-text-color;
+    transition: fill $transition;
+  }
+  
+  }
+  .contact__phone{
+    @media screen and (min-width:768px) and (max-width: 1199px){
+      width: 10px;
+      height: 16px;
+      margin-right: 8px;
+      fill:$color-second-text-color;
+      transition: fill $transition;
+      font-size: 12px;
+  }
+  @media screen and (min-width:1200px){
+    width: 10px;
+      height: 16px;
+      margin-right: 10px;
+      fill:$color-second-text-color;
+      transition: fill $transition;
+  }
+    }
+  
+  
+    
 .contact__link {
+  @media screen and (min-width:768px) and (max-width: 1199px){
+    letter-spacing: 0.01em;
+  }
     @extend %fonts-header;
-    letter-spacing: 0.03em;
+    
     color: $color-second-text-color;
     text-decoration: none;
     display: flex;
@@ -32,20 +95,8 @@
         .contact__phone{
           fill: $color-accent-text-color;
           }
-    }
+        }
+
+    
   }
-  .contact__mail{
-    width: 16px;
-    height: 12px;
-    margin-right: 10px;
-    fill:$color-second-text-color;
-    transition: fill $transition;
-    }
-    .contact__phone{
-      width: 10px;
-      height: 16px;
-      margin-right: 10px;
-      fill:$color-second-text-color;
-      transition: fill $transition;
-    }
-   
+  

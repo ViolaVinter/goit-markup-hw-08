@@ -1,66 +1,126 @@
 /*PORTFOLIO*/
-.menu__button {
-    font-family:inherit;
-    background: $color-second-bcg-color;
-    cursor: pointer;
-    @extend %menu__button;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 4px;
-    border: none;
-    padding: 6px 22px;
-    transition: background-color $transition,color $transition, box-shadow $transition;
-    &:hover,
-    &:focus{
-        background: $color-accent-text-color;
-        color: $color-no-accent-text-color;
-        cursor: pointer;
-        box-shadow: 0px 3px 1px rgba(0,0,0,0.1),
-                    0px 1px 2px rgba(0,0,0,0.08),
-                    0px 0px 0px rgba(0,0,0,0.12);
-    }
+.navigation {
+  @media screen and (max-width:767px){
+    margin-bottom: 50px;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
   }
-  
-  .portfolio__name {
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-    color: $color-primary-text-color;
-    margin-bottom: 4px;
+  @media screen and (min-width:768px) and (max-width: 1199px){
+    margin-bottom: 30px;
+  display: flex;
+  flex-wrap:nowrap;
+  justify-content: center;
   }
-  .portfolio__filter {
-    @extend %subscribe_button;
-    color: $color-second-text-color;
-  }
-  .menu {
+  @media screen and (min-width:1200px){
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
   }
-  .menu__list:not(:last-child) {
+}
+.navigation__list:not(:last-child) {
+  @media screen and (max-width:767px){
     margin-right: 8px;
   }
+  margin-right: 8px;
+}
+.navigation__button {
+  font-family:inherit;
+  background: $color-second-bcg-color;
+  cursor: pointer;
+  @extend %menu__button;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  padding: 6px 22px;
+  transition: background-color $transition,color $transition, box-shadow $transition;
+  &:hover,
+  &:focus{
+      background: $color-accent-text-color;
+      color: $color-no-accent-text-color;
+      cursor: pointer;
+      box-shadow: 0px 3px 1px rgba(0,0,0,0.1),
+                  0px 1px 2px rgba(0,0,0,0.08),
+                  0px 0px 0px rgba(0,0,0,0.12);
+  }
+  @media screen and (max-width:767px){
+    margin-bottom: 15px;
+  }
+}
+.portfolio__name {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $color-primary-text-color;
+  margin-bottom: 4px;
+}
+.portfolio__filter {
+  @extend %subscribe_button;
+  color: $color-second-text-color;
+}
+.portfolio__description {
+  padding: 20px 24px 20px 24px;
+  border-right: 1px solid $color-portfolio-border;
+  border-bottom: 1px solid $color-portfolio-border;
+  border-left: 1px solid $color-portfolio-border;
+  @media screen and (min-width:768px){
+    padding: 20px 24px 20px 24px;
+    width:354px;
+  }
+  @media screen and (min-width:1200px){
+    width:370px;
+  }
+}
+ .tablet {
+  @media screen and (min-width:768px) and (max-width:1199px) {
+    padding: 20px 24px 56px 24px;
+    width:354px;
+  }
+  @media screen and (min-width:1200px){
+    width:370px;
+    padding: 20px 24px 20px 24px;
+  }
+}
+
   .portfolio {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: calc(-1*30px);
+    
+      display: flex;
+      flex-wrap: wrap;
+     
+    
+       
+    @media screen and (min-width:1200px){
+      margin-right: calc(-1*30px);
     margin-bottom: calc(-1*30px);
+    }
   }
   .portfolio__item {
-    flex-basis: calc((100% - 3*30px)/3 -10px);
+    @media screen and (max-width:767px){
+      width:100%;
+    }
+    
+    @media screen and (min-width:768px) and (max-width:1199px){
+      width:50%;
+    
+    }
+    @media screen and (min-width:1200px) {
+      flex-basis: calc((100% - 3*30px)/3 -10px);
     margin: 0 30px 30px 0;
+    }
+  
   }
-  .portfolio__description {
-    padding: 20px 24px 20px 24px;
-    border-right: 1px solid $color-portfolio-border;
-    border-bottom: 1px solid $color-portfolio-border;
-    border-left: 1px solid $color-portfolio-border;
+  
+  .portfolio__item:not(:last-child){
+    margin-bottom:30px;
+
   }
+  
   .portfolio__link{
     text-decoration: none;
     margin-right:0;
-    display:block;
+    /*display:block;*/
     transition: box-shadow $transition;
     &:hover,
     &:focus{
@@ -73,11 +133,22 @@
             transform: translateY(-100%); 
     }
   }
+  @media screen and (min-width:1200px){
+    display:block;
+  }
 }
   
   .portfolio__thumb{
     position: relative;
     overflow:hidden;
+    width:100%;
+    @media screen and (min-width:768px){
+      width:354px;
+    }
+    @media screen and (min-width:1200px){
+      width:370px;
+    }
+    
     
   }
   .portfolio__overlay{
@@ -89,10 +160,14 @@
     top:100%;
     left: 0;
     color:$color-no-accent-text-color;
+    
     @extend %portfolio__overlay;
     padding: 63px 24px;
     background-color: $color-overlay-bcg;
     transform: translateY(0%);
     transition: transform $transition;
+    @media screen and (min-width:768px) and (max-width:1200px){
+      width:354px;
+    }
   }
  

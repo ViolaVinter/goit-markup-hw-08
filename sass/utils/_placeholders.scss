@@ -20,10 +20,26 @@
     line-height: 1.19;
     text-decoration: none;
 }
+%logo_mobile{
+    font-family: $fonts-logo;
+    font-weight: 700;
+    letter-spacing: $letter-spacing-main;
+    font-size: 24px;
+    line-height: 1.17;
+    text-decoration: none;
+}
 %tit{
     font-family: $fonts-main;
     font-weight: 700;
     font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: $letter-spacing-main;
+}
+%tit_mobile{
+    font-family: $fonts-main;
+    font-weight: 700;
+    font-size: 28px;
     line-height: 1.17;
     text-align: center;
     letter-spacing: $letter-spacing-main;
@@ -73,6 +89,14 @@
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
+    letter-spacing: $letter-spacing-caption;
+    text-transform: uppercase;
+}
+%hero_mobile{
+    font-family: $fonts-main; 
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
     letter-spacing: $letter-spacing-caption;
     text-transform: uppercase;
 }

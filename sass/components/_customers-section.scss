@@ -1,15 +1,49 @@
 /*Секция клиентов*/
  .customers{
+  @media screen and (max-width:767px){
+    padding:0px;
+    display: flex;
+    flex-wrap: wrap;
+   margin: -15px;
+  
+  }
+  @media screen and (min-width:768px){
+    padding:0px;
+    display: flex;
+    flex-wrap: wrap;
+   margin: -15px;
+  
+  }
+  @media screen and (min-width:1200px){
     display: flex;
     align-items: center;
     justify-content: center;
     margin:auto;
   }
-  .customers__link{
+  }
+
+ .customers__list{
+  @media screen and (max-width:767px){
+    
+    width: calc((100%  - 4*15px)/2);
+   margin:15px;
+  }
+  @media screen and (min-width:768px) and (max-width:1199px){
+    
+    width: calc((100%  - 6*15px)/3);
+   margin:15px;
+  }
+}
+.customers__list:not(:last-child){
+  @media screen and (min-width:1200px){
+    margin-right: 30px;
+  }
+}
+  .customers__link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 170px;
+    /*width: 210px;*/
     height: 92px;
     border:1px solid $color-fill;
     transition: border $transition;
@@ -20,8 +54,13 @@
             fill: $color-accent-text-color;
         }  
     }
-  }
-  .customers__icons{
+    @media screen and (min-width:1200px){
+      width: 170px;
+    }
+    }
+
+  
+  .customers__icons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,7 +69,4 @@
     fill:$color-fill;
     transition:  fill $transition;
       }
-  .customers__list:not(:last-child){
-    margin-right: 30px;
-  }
-  
+ 

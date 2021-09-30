@@ -1,6 +1,7 @@
 .workers {
     background: $color-second-bcg-color; 
   }
+  
   .personal
   {
     padding: 30px 30px 30px 30px;
@@ -16,11 +17,26 @@
     line-height: 1.19;
     color: $color-second-text-color;
   }
+  .cards {
+    @media screen and (min-width:768px){
+      padding:0px;
+      display: flex;
+      flex-wrap: wrap;
+     margin: -15px;
+    
+    }
+  }
   .cards__list {
    
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    @media screen and (min-width:768px) and (max-width:1199px){
+    
+      width: calc((100%  - 4*15px)/2);
+     margin:15px;
+    }
+   
   }
   .icons{
     display:flex;
@@ -57,6 +73,26 @@
             fill:$color-no-accent-text-color;
             transition: fill $transition;
         }
+    }
+  }
+  .cards__image{
+    @media screen and (max-width:767px) {
+      width:450px;
+      
+    }
+    @media screen and (min-width:768px) {
+      width:354px;
+      
+    }
+    @media screen and (min-width:1200px) {
+      width:270px;
+      
+    }
+  }
+  .cards__list:not(:last-child){
+    @media screen and (max-width:767px) {
+     
+      margin-bottom: 30px;
     }
   }
   

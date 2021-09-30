@@ -6,16 +6,19 @@ body {
     font-size: 14px;
     line-height:1.19;  
   }
+ 
   
   h1,h2,h3,h4,p,ul{
     margin: 0;
     padding: 0;
     list-style: none;
   }
+  
   img {
     display: block;
     max-width: 100%;
   }
+  
   .visually-hidden {
     position: absolute;
     width: 1px;
@@ -28,18 +31,37 @@ body {
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
+
   .container{
-    width: 1200px;
+    
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right:auto;
+    width: 100%;
+
+    @media screen and (min-width:480px){
+      width:480px;
+    } 
+    @media screen and (min-width:768px){
+      width:768px;
+    }
+    @media screen and (min-width:1200px){
+      width:1200px;
+    }
   }
   a {
     text-decoration: none;
   }
+  
   .section{
-    padding-top: 94px;
+    @media screen and (max-width:1199px){
+      padding-top: 60px;
+    padding-bottom: 60px;
+    }
+    @media screen and (min-width:1200px){
+     padding-top: 94px;
     padding-bottom: 94px;
+    } 
   }
-    
+   

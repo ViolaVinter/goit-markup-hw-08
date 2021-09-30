@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
@@ -21,6 +22,12 @@
         <!--Хедер-Студия-Портфолио-Контакты-->
             <a href=" " lang="en" class="nav__logo">
               <span class="nav__logo web">Web</span><span class="nav__logo studio">Studio</span></a>
+              <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="menu_open" width=40px height=40px>
+                  <use href="./images/icons.svg#icon-menu_40px"></use>
+                </svg>
+              </button>
+            
               <ul class="nav__item">
                 <li class="nav__list">
                     <a href="./index.html" class="nav__link current">Студия</a>
@@ -64,7 +71,7 @@
         <ul class="feature">
             <li class="feature__list">
               <div class="feature__box first">
-                <svg class="feature__icon first" width=70px height=70px >
+                <svg class="feature__icon first"  >
                   <use href="./images/icons.svg#group1"></use>
                 </svg>
               </div>
@@ -73,7 +80,7 @@
             </li>
             <li class="feature__list">
               <div class="feature__box second">
-                <svg class="feature__icon second" width=70px height=70px>
+                <svg class="feature__icon second" >
                   <use href="./images/icons.svg#group2"></use>
                 </svg>
               </div>
@@ -82,7 +89,7 @@
             </li>
             <li class="feature__list">
               <div class="feature__box third">
-                <svg class="feature__icon third" width=70px height=70px>
+                <svg class="feature__icon third" >
                   <use href="./images/icons.svg#group3"></use>
                 </svg>
               </div>
@@ -91,7 +98,7 @@
             </li>
             <li class="feature__list">
               <div class="feature__box fourth">
-                <svg class="feature__icon third" width=70px height=70px>
+                <svg class="feature__icon third" >
                   <use href="./images/icons.svg#group4"></use>
                 </svg>
               </div>
@@ -101,7 +108,7 @@
         </ul>
         </div>
     </section>
-    <section class="section">
+    <section class="section active">
       <div class="container">
       <h2 class="tit">Чем мы занимаемся</h2>
       <ul class="activity">
@@ -145,15 +152,19 @@
     </div>
     </section>
       <section class="workers section">
-        <div class="container team">
+        <div class="container">
         <h2 class="tit">Наша команда</h2>
         <ul class="cards">
           <li class="cards__list">
-              <img
-                src="./images/product-designer.jpg"
-                alt="product-designer"
-                width="270"
-              />
+            <picture>
+              <source srcset="./images/product-designer_desktop.jpg 1x, ./images/product-designer_desktop@2x.jpg 2x" media="(min-width:1200px)"/>
+              <source srcset="./images/product-designer_tablet.jpg 1x, ./images/product-designer_tablet@2x.jpg 2x" media="(min-width:768px)"/>
+              <source srcset="./images/product-designer_mobile.jpg 1x, ./images/product-designer_mobile@2x.jpg 2x" media="(max-width:767px)"/>
+              <img srcset="./images/product-designer_mobile.jpg 1x, ./images/product-designer_mobile@2x.jpg 2x" src="./images/product-designer_mobile.jpg" alt="Описание"/>
+            </picture>
+            
+            <!--<img srcset="./images/product-designer_mobile.jpg 1x, ./images/product-designer_mobile@2x.jpg 2x" src="./images/product-designer_mobile.jpg" alt="Описание"/>-->
+            
               <div class="personal">
               <h3 class="personal__name">Игорь Демьяненко</h3>
               <p class="personal__position">Product Designer</p>
@@ -190,11 +201,13 @@
             </div>
           </li>
           <li class="cards__list">
-               <img
-                src="./images/frontend-developer.jpg"
-                alt="frontend-developer"
-                width="270"
-              />
+            <picture>
+              <source srcset="./images/frontend-developer_desktop.jpg 1x, ./images/frontend-developer_desktop@2x.jpg 2x" media="(min-width:1200px)"/>
+              <source srcset="./images/frontend-developer_tablet.jpg 1x, ./images/frontend-developer_tablet@2x.jpg 2x" media="(min-width:768px)"/>
+              <source srcset="./images/frontend-developer_mobile.jpg 1x, ./images/frontend-developer_mobile@2x.jpg 2x" media="(max-width:767px)"/>
+              <img srcset="./images/frontend-developer_mobile.jpg 1x, ./images/frontend-developer_mobile@2x.jpg 2x" src="./images/frontend-developer_mobile.jpg" alt="frontend-developer"/>
+            </picture>
+               
               <div class="personal">
               <h3 class="personal__name">Ольга Репина</h3>
               <p class="personal__position">Frontend Developer</p>
@@ -231,7 +244,13 @@
           </div>
           </li>
           <li class="cards__list">
-              <img src="./images/marketing.jpg" alt="marketing" width="270" />
+            <picture>
+              <source srcset="./images/marketing_desktop.jpg 1x, ./images/marketing_desktop@2x.jpg 2x" media="(min-width:1200px)"/>
+              <source srcset="./images/marketing_tablet.jpg 1x, ./images/marketing_tablet@2x.jpg 2x" media="(min-width:768px)"/>
+              <source srcset="./images/marketing_mobile.jpg 1x, ./images/marketing_mobile@2x.jpg 2x" media="(max-width:767px)"/>
+              <img srcset="./images/marketing_mobile.jpg 1x, ./images/marketing_mobile@2x.jpg 2x" src="./images/marketing_mobile.jpg" alt="marketing"/>
+            </picture>
+              
               <div class="personal">
               <h3 class="personal__name">Николай Тарасов</h3>
               <p class="personal__position">Marketing</p>
@@ -268,11 +287,12 @@
               </div>
           </li>
           <li class="cards__list">
-              <img
-                src="./images/ui-designer.jpg"
-                alt="ui-designer"
-                width="270"
-              />
+            <picture>
+              <source srcset="./images/ui-designer_desktop.jpg 1x, ./images/ui-designer_desktop@2x.jpg 2x" media="(min-width:1200px)"/>
+              <source srcset="./images/ui-designer_tablet.jpg 1x, ./images/ui-designer_tablet@2x.jpg 2x" media="(min-width:768px)"/>
+              <source srcset="./images/ui-designer_mobile.jpg 1x, ./images/ui-designer_mobile@2x.jpg 2x" media="(max-width:767px)"/>
+              <img srcset="./images/ui-designer_mobile.jpg 1x, ./images/ui-designer_mobile@2x.jpg 2x" src="./images/ui-designer_mobile.jpg" alt="ui-designer"/>
+            </picture>
               <div class="personal">
               <h3 class="personal__name">Михаил Ермаков</h3>
               <p class="personal__position">UI Designer</p>
@@ -370,7 +390,7 @@
           </a>
           <address>
             <p class="address">г. Киев, пр-т Леси Украинки, 26</p>
-            <ul>
+            <ul class="address__list">
               <li class="address__mail">
                 <a href="mailto:info@example.com" class="address__link"
                   >info@example.com</a>
@@ -419,18 +439,26 @@
         <div class="subscribe">
           <b class="subscribe__name">ПОДПИШИТЕСЬ НА РАССЫЛКУ</b>
               <div class="subscribe__form">
-                <form name="signup_form" autocomplete="on" novalidate>
-              <input type="email" name="email"  placeholder="E-mail" class="subscribe__input"/>
-            <button type="submit" class="subscribe__button">Подписаться  
-            <svg  class="subscribe__image" width=24px height=24px>
-              <use href="./images/icons.svg#plane"></use>
-            </svg>
-          </button>
+                <form class="footer__form" name="signup_form" autocomplete="on" novalidate >
+                  <div class="input__footer">
+                    <input type="email" name="email"  placeholder="E-mail" class="subscribe__input"/>
+                  </div>
+              
+              <div class="button__footer">
+                <button type="submit" class="subscribe__button">Подписаться  
+                  <svg  class="subscribe__image" width=24px height=24px>
+                    <use href="./images/icons.svg#plane"></use>
+                  </svg>
+                </button>
+              </div>
+           
         </form>
+        
             </div>
         </div>
   </div>
     </footer>
+    
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="icon-close" data-modal-close>
@@ -488,7 +516,57 @@
           </form>
           </div>      
       </div>
-    
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <div class="window__menu">
+          <button class="menu-toggle js-close-menu">
+            <svg  class="menu__close" width=19px height=19px >
+              <use href="./images/icons.svg#closebutton"></use>
+            </svg>
+          </button>
+          
+            
+          <ul class="window__item">
+            <li class="window__list">
+                <a href="./index.html" class="window__link current">Студия</a>
+            </li>
+            <li class="window__list">
+                <a href="./portfolio.html" class="window__link">Портфолио</a>
+            </li>
+            <li class="window__list">
+                <a href="" class="window__link">Контакты</a>
+            </li>
+          </ul>
+       <div class="mob-menu__bottom">
+        <ul class="window__contact">
+          <li class="window__contact-list">
+            <a href="tel:+380961111111" class="window__contact-link phone ">
+               +38 096 111 11 11</a>
+          </li>
+          <li class="window__contact-list">
+            <a href="mailto:info@devstudio.com" class="window__contact-link mail"
+              >
+               info@devstudio.com</a>
+          </li>
+        </ul>
+    <ul class="social-menu">
+      <li class="social-menu__list"><a href="" class="social-menu__link">Instagram</a></li>
+      <li class="social-menu__list"><a href="" class="social-menu__link">Twitter</a></li>
+      <li class="social-menu__list"><a href="" class="social-menu__link">Facebook</a></li>
+      <li class="social-menu__list"><a href="" class="social-menu__link">LinkedIn</a></li>
+    </ul>
+       </div>
+        </div>
+        
+     </div>
+  
+  
+      <script
+        defer
+        src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"
+      ></script>
+      <script defer src="mobile-menu.js"></script>
     <script src="./modal.js"></script>
   </body>
 </html>
