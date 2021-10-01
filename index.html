@@ -47,6 +47,7 @@
             >
             <svg class="contact__mail">
               <use href="./images/icons.svg#mail"></use>
+              <!--<use href="./images/icons.svg#mail"></use>-->
             </svg> info@devstudio.com</a>
         </li>
         <li class="contact__list tel">
@@ -114,11 +115,10 @@
       <ul class="activity">
         <li class="activity__list">
           <div class="presentation">
-            <img class="presentation__image"
-            src="./images/profession-1.jpg"
-            alt="profession-1"
-            width="370"
-            />
+            <picture>
+              <source srcset="./images/profession-1.jpg 1x, ./images/profession-1@2x.jpg 2x" media="(min-width:1200px)"/>
+              <img srcset="./images/profession-1.jpg 1x, ./images/profession-1@2x.jpg 2x" src="./images/profession-1.jpg" alt="profession-1"/>
+            </picture>
             <div class="overlay">
               <p class="overlay__name">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</p>
             </div>
@@ -126,11 +126,10 @@
         </li>
         <li class="activity__list">
           <div class="presentation">
-            <img class="presentation__image"
-            src="./images/profession-2.jpg"
-            alt="profession-2"
-            width="370"
-            />
+            <picture>
+              <source srcset="./images/profession-2.jpg 1x, ./images/profession-2@2x.jpg 2x" media="(min-width:1200px)"/>
+              <img srcset="./images/profession-2.jpg 1x, ./images/profession-2@2x.jpg 2x" src="./images/profession-2.jpg" alt="profession-2"/>
+            </picture>
             <div class="overlay">
               <p class="overlay__name">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</p>
             </div>
@@ -138,11 +137,10 @@
         </li>
         <li class="activity__list">
           <div class="presentation">
-            <img class="presentation__image"
-            src="./images/profession-3.jpg"
-            alt="profession-3"
-            width="370"
-            />
+            <picture>
+              <source srcset="./images/profession-3.jpg 1x, ./images/profession-3@2x.jpg 2x" media="(min-width:1200px)"/>
+              <img srcset="./images/profession-3.jpg 1x, ./images/profession-3@2x.jpg 2x" src="./images/profession-3.jpg" alt="profession-3"/>
+            </picture>
             <div class="overlay">
               <p class="overlay__name">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</p>
             </div>
@@ -512,7 +510,10 @@
               <span class="contract__text">Соглашаюсь с рассылкой и принимаю <a href="#" class="contract__link"> Условия договора</a></span>
             </label>
           </div>
-             <button type="submit" class="contract__button"> Отправить </button>
+          <div class="button__modal">
+            <button type="submit" class="contract__button"> Отправить </button>
+          </div>
+             
           </form>
           </div>      
       </div>
